@@ -1,0 +1,56 @@
+{
+  "cases": [
+    {
+      "slug": "pet-content-studio",
+      "templateId": "builtin-case-pet-content",
+      "ranAt": "2026-10-29T05:58:22+00:00",
+      "nodes": [
+        {
+          "id": 1,
+          "title": "30 条选题",
+          "kind": "text",
+          "prompt": "列出 30 条养宠科普短视频选题，每条标注目标搜索词、竞争程度与建议时长，按「高搜索低竞争」排序。号定位：城市养猫上班族。",
+          "ok": true,
+          "provider": "mock",
+          "model": "offline-mock",
+          "ms": 2,
+          "file": "frontend\\public\\cases\\.mock\\pet-content-studio\\node-1-30-条选题.md",
+          "chars": 70
+        },
+        {
+          "id": 2,
+          "title": "5 条口播脚本",
+          "kind": "text",
+          "prompt": "从上面选题里挑 5 条写成 40 秒口播稿：前 3 秒抛结论，中间给一个可验证的证据，结尾给一个明确动作。{{input}}",
+          "ok": true,
+          "provider": "mock",
+          "model": "offline-mock",
+          "ms": 0,
+          "file": "frontend\\public\\cases\\.mock\\pet-content-studio\\node-2-5-条口播脚本.md",
+          "chars": 215
+        },
+        {
+          "id": 3,
+          "title": "竖屏封面 5 张",
+          "kind": "image",
+          "prompt": "按脚本生成竖屏封面：大字标题 + 单主体，字号按手机缩略图可读性定，顶部与底部留平台安全区。{{input}}",
+          "ok": true,
+          "provider": "mock",
+          "model": "offline-mock",
+          "ms": 108,
+          "artifact": "5732e9923eba40da94538ef4582e721b",
+          "url": null
+        },
+        {
+          "id": 4,
+          "title": "分镜成片",
+          "kind": "video",
+          "prompt": "把脚本排成 15/30/45 秒三档分镜并生成竖屏成片，字幕全片覆盖，前 3 秒出结论。{{input}}",
+          "ok": false,
+          "skipped": true,
+          "reason": "video 节点暂无本地通道，需配置视频服务"
+        }
+      ]
+    }
+  ]
+}
